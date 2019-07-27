@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &__right {
+    width: 80%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: #f9f9f9;
+  }
+}

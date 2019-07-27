@@ -1,0 +1,25 @@
+.info {
+  box-sizing: border-box;
+  width: 20%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+  background-color: #2b2f3e;
+
+  &__logo {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    user-select: none;
+  }
+
+  &__description {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #909090;
+  }
+}
