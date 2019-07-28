@@ -1,0 +1,25 @@
+.comment {
+  display: none;
+  box-sizing: border-box;
+  min-height: 70vh;
+  width: 48%;
+  padding: 10px 30px;
+  box-shadow: 0 0 5px #00000030;
+  background-color: #fff;
+  transition: display 750ms;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #505050;
+  }
+
+  @media (min-width: 1180px) {
+    &__title {
+      font-size: 38px;
+    }
+  }
+}

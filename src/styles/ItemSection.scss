@@ -1,6 +1,7 @@
 .item {
   box-sizing: border-box;
-  width: 50%;
+  min-height: 70vh;
+  width: 48%;
   padding: 10px 30px;
   box-shadow: 0 0 5px #00000030;
   background-color: #fff;
@@ -9,18 +10,116 @@
     margin: 0;
     margin-bottom: 10px;
     font-size: 28px;
-    line-height: 1.6;
+    line-height: 1.5;
     font-weight: 400;
-    color: #303030;
+    color: #505050;
   }
 
   &__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   &__input {
-    border-radius: 3px;
+    flex-grow: 1;
+    margin-right: 20px;
     padding: 5px 10px;
-    border: 1px solid #f0f0f0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
     color: #303030;
+    border: 2px solid #e0e0e0;
+    border-radius: 3px;
+  }
+
+  &__submit {
+    padding: 7px 25px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    background-color: #27ccc0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: ease-in 200ms;
+
+    &:hover {
+      background-color: #24beb4;
+      transition: ease-out 200ms;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+
+    &--active {
+    }
+  }
+
+  &__left-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__item-title {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  &__comments {
+    margin-left: 10px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #fff;
+    background-color: #27ccc0;
+    border-radius: 7px;
+    user-select: none;
+  }
+
+  &__delete {
+    padding: 5px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ff2f5a;
+    background-color: transparent;
+    border: 1px solid #ff2f5a;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: #ff4d70;
+      border: 1px solid #ff4d70;
+    }
+  }
+
+  &__active {
+    background-color: #ff2f5a;
+  }
+
+  @media (min-width: 1180px) {
+    &__title {
+      font-size: 38px;
+    }
   }
 }

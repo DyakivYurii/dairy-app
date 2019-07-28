@@ -22,4 +22,15 @@
     line-height: 1.5;
     color: #909090;
   }
+
+  @media (min-width: 1180px) {
+    &__logo {
+      font-size: 38px;
+      font-weight: 400;
+    }
+
+    &__description {
+      font-size: 18px;
+    }
+  }
 }
