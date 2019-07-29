@@ -9,7 +9,6 @@ const getStoreFromLocalStorage = () => {
 
 const saveStoreToLocalStorage = (event) => {
   event.preventDefault();
-  // event.returnValue = '';
   window.localStorage.setItem('store', JSON.stringify(store));
 };
 
