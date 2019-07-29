@@ -59,15 +59,22 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #e0e0e0;
     cursor: pointer;
+  }
 
-    &--active {
-    }
+  &__span {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    height: 100%;
+    width: 3px;
+    background-color: #ff2f5a;
   }
 
   &__left-flex {

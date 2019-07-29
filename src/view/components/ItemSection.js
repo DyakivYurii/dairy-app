@@ -1,9 +1,13 @@
-import React, { use, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../styles/ItemSection.scss';
 
-const ItemSection = () => {
+const ItemSection = ({ store, selectedItem, setSelectedItem, setStore }) => {
   const [itemText, setItemText] = useState('');
-  const [allItems, setAllItems] = useState([]);
+  const [allItems, setAllItems] = useState([...store]);
+
+  useEffect(() => {
+    setAllItems([...store]);
+  }, [store, selectedItem]);
 
   const handleChangeInput = (event) => {
     setItemText(event.target.value);
@@ -15,13 +19,25 @@ const ItemSection = () => {
     const newItem = { name: itemText, comments: [] };
     copyOfArray.push(newItem);
     setAllItems(copyOfArray);
+    setStore(copyOfArray);
+    setItemText('');
   };
 
   const handleDeleteItem = (index) => (event) => {
     event.preventDefault();
+    event.stopPropagation();
     const copyOfArray = [...allItems];
     copyOfArray.splice(index, 1);
     setAllItems(copyOfArray);
+    setStore(copyOfArray);
+    setSelectedItem(null);
+  };
+
+  const setSelection = (id) => () => {
+    if (selectedItem === id) {
+      return setSelectedItem(null);
+    }
+    return setSelectedItem(id);
   };
 
   return (
@@ -43,9 +59,11 @@ const ItemSection = () => {
         {allItems.map((element, index) => {
           return (
             <li
-              className="item__item item__item--active"
+              className="item__item"
               key={index + element.name}
+              onClick={setSelection(index)}
             >
+              {selectedItem === index && <span className="item__span" />}
               <div className="item__left-flex">
                 <h3 className="item__item-title">{element.name}</h3>
                 <span className="item__comments">
