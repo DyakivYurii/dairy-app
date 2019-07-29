@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dairy-app/static/css/main.d2b61a9b.chunk.css",
+    "main.js": "/dairy-app/static/js/main.e9d861ab.chunk.js",
+    "main.js.map": "/dairy-app/static/js/main.e9d861ab.chunk.js.map",
+    "runtime~main.js": "/dairy-app/static/js/runtime~main.2a02b4b7.js",
+    "runtime~main.js.map": "/dairy-app/static/js/runtime~main.2a02b4b7.js.map",
+    "static/js/2.aff167c4.chunk.js": "/dairy-app/static/js/2.aff167c4.chunk.js",
+    "static/js/2.aff167c4.chunk.js.map": "/dairy-app/static/js/2.aff167c4.chunk.js.map",
+    "index.html": "/dairy-app/index.html",
+    "precache-manifest.9bb685d1c828fd6ab8534f5ba30bcbe0.js": "/dairy-app/precache-manifest.9bb685d1c828fd6ab8534f5ba30bcbe0.js",
+    "service-worker.js": "/dairy-app/service-worker.js",
+    "static/css/main.d2b61a9b.chunk.css.map": "/dairy-app/static/css/main.d2b61a9b.chunk.css.map"
+  }
+}
