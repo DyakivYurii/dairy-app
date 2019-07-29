@@ -1,0 +1,19 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &__right {
+    box-sizing: border-box;
+    width: 80%;
+    min-height: 100vh;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    background-color: #f9f9f9;
+  }
+}
