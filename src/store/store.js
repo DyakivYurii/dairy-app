@@ -5,8 +5,6 @@ const getStoreFromLocalStorage = () => {
     window.localStorage.getItem('store')
   );
   store = storeFromLocalStorage ? storeFromLocalStorage : [];
-
-  //comment
 };
 
 const saveStoreToLocalStorage = (event) => {
